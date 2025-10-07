@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const product={
+            id:101,
+            name:"Laptop Bag",
+            price:49.99
+        }
+        console.log(product.name);
+        console.log(product["price"]);
+
+
+        product.price=39.99;
+        product.stock =150;
+        delete product.id;
+        console.log(product);
+        
+        for (let keys in product){
+            console.log(product[keys]);
+        }
+        const allkeys=Object.keys(product);
+        const allvalue=Object.values(product);
+        console.log(allkeys);
+        console.log(allvalue);
+    </script>
+</body>
+</html>
